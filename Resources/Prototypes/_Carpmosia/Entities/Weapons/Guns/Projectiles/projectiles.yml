@@ -1,0 +1,23 @@
+- type: entity
+  id: HarpoonHook
+  name: harpoon hook
+  parent: GrapplingHook
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Projectile
+      deleteOnCollide: false
+      damage:
+        types:
+          Blunt: 15
+          Structural: 30
+    - type: Fixtures
+      fixtures:
+        projectile:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.1,-0.1,0.1,0.1"
+          hard: false
+          mask:
+            - Impassable
+            - HighImpassable
+            - BulletImpassable

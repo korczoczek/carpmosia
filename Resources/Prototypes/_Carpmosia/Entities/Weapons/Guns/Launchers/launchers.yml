@@ -1,0 +1,8 @@
+- type: entity
+  name: harpoon gun
+  parent: WeaponGrapplingGun
+  id: WeaponHarpoonGun
+  components:
+    - type: BasicEntityAmmoProvider
+      proto: HarpoonHook
+      capacity: 1
