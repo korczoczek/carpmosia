@@ -3,7 +3,7 @@
   groups:
   - GroupTankHarness
   # Common groups
-  # - ResearchAssistantHead
+  - ResearchAssistantHead
   - ResearchAssistantGlasses
   # - ResearchAssistantMask
   - ResearchAssistantNeck
@@ -19,3 +19,4 @@
   - GroupSpeciesBreathTool
   # - ResearchAssistantSpecial
   - ResearchAssistantTrinkets
+  - ResearchAssistantPets

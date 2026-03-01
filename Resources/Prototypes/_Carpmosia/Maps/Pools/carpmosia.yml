@@ -1,14 +1,16 @@
 - type: gameMapPool
   id: CarpmosiaMapPool
   maps:
-  - Amber
+  - CarpAmber
   - Bagel
   - Box
   - Elkridge
+  - CarpFeint
   - Fland
   - Marathon
-  - Oasis2
+  - CarpOasis
+  - CarpSaltern
   - Packed
   - Plasma
-  - Reach
   - Exo
+  - Snowball

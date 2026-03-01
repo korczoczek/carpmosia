@@ -3,7 +3,7 @@
   groups:
   - GroupTankHarness
   # Common groups
-  # - SalvageSpecialistHead
+  - SalvageSpecialistHead
   - SalvageSpecialistGlasses
   # - SalvageSpecialistMask
   - SalvageSpecialistNeck
@@ -19,3 +19,4 @@
   - GroupSpeciesBreathTool
   # - SalvageSpecialistSpecial
   - SalvageSpecialistTrinkets
+  - SalvageSpecialistPets

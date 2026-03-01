@@ -1,6 +1,6 @@
-# - type: loadoutGroup
-#   parent: [ CivilianHead, CommonHead ]
-#   id: PassengerHead
+- type: loadoutGroup
+  parent: [ CivilianHead, CommonHead ]
+  id: PassengerHead
 
 - type: loadoutGroup
   parent: [ CivilianGlasses, CommonGlasses ]
@@ -63,3 +63,7 @@
 - type: loadoutGroup
   parent: [ CivilianTrinkets, CommonTrinkets ]
   id: PassengerTrinkets
+
+- type: loadoutGroup
+  parent: [ CivilianPets, CommonPets ]
+  id: PassengerPets

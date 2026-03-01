@@ -3,7 +3,7 @@
   groups:
   - GroupTankHarness
   # Common groups
-  # - LibrarianHead
+  - LibrarianHead
   - LibrarianGlasses
   # - LibrarianMask
   - LibrarianNeck
@@ -19,3 +19,4 @@
   - GroupSpeciesBreathTool
   # - LibrarianSpecial
   - LibrarianTrinkets
+  - LibrarianPets

@@ -9,6 +9,8 @@
   - Revolutionary
   - AllHostile
   - Wizard
+  - Xenoborg
+  - BloodBound # Carpmosia-edit - Harmony Blood Bound
 
 - type: npcFaction
   id: NanoTrasen
@@ -22,6 +24,7 @@
   - AllHostile
   - Wizard
   - Xenoborg
+  - BloodBound # Carpmosia-edit - Harmony Blood Bound
 
 - type: npcFaction
   id: Mouse
@@ -35,13 +38,14 @@
 
 - type: npcFaction
   id: PetsNT
+  friendly:
+  - NanoTrasen
   hostile:
   - Mouse
   - SimpleHostile
   - Zombie
   - Xeno
   - AllHostile
-  - Wizard
   - Dragon
 
 - type: npcFaction
@@ -58,6 +62,7 @@
   - AllHostile
   - Wizard
   - Xenoborg
+  - BloodBound # Carpmosia-edit - Harmony Blood Bound
 
 - type: npcFaction
   id: SimpleNeutral
@@ -88,6 +93,7 @@
   - Wizard
   - Dragon
   - Xenoborg
+  - BloodBound # Carpmosia-edit - Harmony Blood Bound
 
 - type: npcFaction
   id: Zombie
@@ -103,6 +109,7 @@
   - Wizard
   - Dragon
   - Xenoborg
+  - BloodBound # Carpmosia-edit - Harmony Blood Bound
 
 - type: npcFaction
   id: Revolutionary
@@ -131,6 +138,7 @@
   - Revolutionary
   - Wizard
   - Xenoborg
+  - BloodBound # Carpmosia-edit - Harmony Blood Bound
 
 - type: npcFaction
   id: Wizard
@@ -148,6 +156,7 @@
   - Revolutionary
   - AllHostile
   - Xenoborg
+  - BloodBound # Carpmosia-edit - Harmony Blood Bound
 
 - type: npcFaction
   id: Xenoborg
@@ -158,9 +167,10 @@
   - Zombie
   - Revolutionary
   - Wizard
+  - BloodBound # Carpmosia-edit - Harmony Blood Bound
 
   - Xeno # rivalry
 
   # cause they are hostile to them
-  - SimpleHostile 
+  - SimpleHostile
   - AllHostile

@@ -3,7 +3,7 @@
   groups:
   - GroupTankHarness
   # Common groups
-  # - MedicalInternHead
+  - MedicalInternHead
   - MedicalInternGlasses
   # - MedicalInternMask
   - MedicalInternNeck
@@ -19,3 +19,4 @@
   - GroupSpeciesBreathToolMedical
   # - MedicalInternSpecial
   - MedicalInternTrinkets
+  - MedicalInternPets

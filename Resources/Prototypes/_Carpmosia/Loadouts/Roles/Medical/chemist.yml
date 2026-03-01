@@ -3,7 +3,7 @@
   groups:
   - GroupTankHarness
   # Common groups
-  # - ChemistHead
+  - ChemistHead
   - ChemistGlasses
   - ChemistMask
   - ChemistNeck
@@ -19,3 +19,4 @@
   - GroupSpeciesBreathToolMedical
   # - ChemistSpecial
   - ChemistTrinkets
+  - ChemistPets

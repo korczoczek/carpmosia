@@ -3,6 +3,7 @@
   table: !type:AllSelector
     children:
     - id: OxygenTankFilled
+    - id: NitrogenTankFilled # Carpmosia-edit - Accessible nitrogen
     - id: ClothingShoesBootsMag
     - id: ClothingOuterHardsuitSpatio
     - id: ClothingMaskGasExplorer
@@ -21,6 +22,8 @@
       prob: 0.3
       rolls: !type:ConstantNumberSelector
         value: 3
+    - id: PlushieLizardJobSalvagespecialist
+      prob: 0.02
 
 - type: entity
   id: LockerSalvageSpecialistFilledHardsuit

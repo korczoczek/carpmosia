@@ -1,6 +1,6 @@
-# - type: loadoutGroup
-#   parent: [ CivilianHead, CommonHead ]
-#   id: ReporterHead
+- type: loadoutGroup
+  parent: [ CivilianHead, CommonHead ]
+  id: ReporterHead
 
 - type: loadoutGroup
   parent: [ CivilianGlasses, CommonGlasses ]
@@ -52,3 +52,7 @@
 - type: loadoutGroup
   parent: [ CivilianTrinkets, CommonTrinkets ]
   id: ReporterTrinkets
+
+- type: loadoutGroup
+  parent: [ CivilianPets, CommonPets ]
+  id: ReporterPets

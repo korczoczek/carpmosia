@@ -1,6 +1,6 @@
-# - type: loadoutGroup
-#   parent: [ ScienceHead, CommonHead ]
-#   id: ResearchAssistantHead
+- type: loadoutGroup
+  parent: [ ScienceHead, CommonHead ]
+  id: ResearchAssistantHead
 
 - type: loadoutGroup
   parent: [ ScienceGlasses, CommonGlasses ]
@@ -52,3 +52,7 @@
 - type: loadoutGroup
   parent: [ ScienceTrinkets, CommonTrinkets ]
   id: ResearchAssistantTrinkets
+
+- type: loadoutGroup
+  parent: [ SciencePets, CommonPets ]
+  id: ResearchAssistantPets

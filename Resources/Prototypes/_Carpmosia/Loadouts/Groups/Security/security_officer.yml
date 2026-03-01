@@ -2,7 +2,6 @@
   parent: [ SecurityHead, CommonHead ]
   id: SecurityOfficerHead
   loadouts:
-  - SecurityHelmet
   - SecurityBeret
   - SecurityHat
   - TrooperHat
@@ -71,3 +70,7 @@
 - type: loadoutGroup
   parent: [ SecurityTrinkets, CommonTrinkets ]
   id: SecurityOfficerTrinkets
+
+- type: loadoutGroup
+  parent: [ SecurityPets, CommonPets ]
+  id: SecurityOfficerPets

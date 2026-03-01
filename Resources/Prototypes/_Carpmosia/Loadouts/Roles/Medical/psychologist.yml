@@ -3,7 +3,7 @@
   groups:
   - GroupTankHarness
   # Common groups
-  # - PsychologistHead
+  - PsychologistHead
   - PsychologistGlasses
   # - PsychologistMask
   - PsychologistNeck
@@ -19,3 +19,4 @@
   - GroupSpeciesBreathTool
   # - PsychologistSpecial
   - PsychologistTrinkets
+  - PsychologistPets

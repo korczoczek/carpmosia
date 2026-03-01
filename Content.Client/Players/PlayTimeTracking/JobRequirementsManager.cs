@@ -25,8 +25,8 @@ public sealed class JobRequirementsManager : ISharedPlaytimeManager
     [Dependency] private readonly IPrototypeManager _prototypes = default!;
 
     private readonly Dictionary<string, TimeSpan> _roles = new();
-    private readonly List<string> _jobBans = new();
-    private readonly List<string> _antagBans = new();
+    private readonly List<ProtoId<JobPrototype>> _jobBans = new();
+    private readonly List<ProtoId<AntagPrototype>> _antagBans = new();
     private readonly List<string> _jobWhitelists = new();
 
     private ISawmill _sawmill = default!;
@@ -235,6 +235,7 @@ public sealed class JobRequirementsManager : ISharedPlaytimeManager
     public IEnumerable<KeyValuePair<string, TimeSpan>> FetchPlaytimeByRoles()
     {
         var jobsToMap = _prototypes.EnumeratePrototypes<JobPrototype>();
+        var antagsToMap = _prototypes.EnumeratePrototypes<AntagPrototype>(); // Carpmosia-edit - Antag playtimes
 
         foreach (var job in jobsToMap)
         {
@@ -243,6 +244,15 @@ public sealed class JobRequirementsManager : ISharedPlaytimeManager
                 yield return new KeyValuePair<string, TimeSpan>(job.Name, locJobName);
             }
         }
+        // Carpmosia-start - Antag playtimes
+        foreach (var antag in antagsToMap)
+        {
+            if (antag.PlayTimeTracker != null && _roles.TryGetValue(antag.PlayTimeTracker, out var locAntagName))
+            {
+                yield return new KeyValuePair<string, TimeSpan>(antag.Name, locAntagName);
+            }
+        }
+        // Carpmosia-end - Antag playtimes
     }
 
     public IReadOnlyDictionary<string, TimeSpan> GetPlayTimes(ICommonSession session)
