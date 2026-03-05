@@ -9,3 +9,17 @@
   - Wizard
   - Xenoborg
   - Xeno
+
+- type: npcFaction
+  id: Pirates
+  hostile:
+  - NanoTrasen
+  - Syndicate
+  - Revolutionary
+  - Zombie
+  - SimpleHostile
+  - Dragon
+  - AllHostile
+  - Wizard
+  - Xenoborg
+  - Xeno

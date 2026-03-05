@@ -20,7 +20,7 @@ public sealed partial class PirateSystem : EntitySystem
     {
         var xform = Transform(grid);
         var enumerator = xform.ChildEnumerator;
-        var pirateEquipment = new PirateEquipmentComponent{};
+        var pirateEquipment = new PirateEquipmentComponent();
         while (enumerator.MoveNext(out var child))
         {
             EntityManager.AddComponent(child, pirateEquipment, true);
