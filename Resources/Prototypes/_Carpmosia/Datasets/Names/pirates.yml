@@ -1,0 +1,12 @@
+- type: localizedDataset
+  id: NamesPirateTitle
+  values:
+    prefix: names-pirate-title-dataset-
+    count: 19
+
+#list of real pirate surnames
+- type: localizedDataset
+  id: NamesPirateLast
+  values:
+    prefix: names-pirate-last-dataset-
+    count: 272

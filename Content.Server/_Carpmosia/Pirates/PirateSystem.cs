@@ -6,6 +6,7 @@ namespace Content.Server.Pirates;
 public sealed partial class PirateSystem : EntitySystem
 {
     [Dependency] private readonly ILogManager _logManager = default!;
+    [Dependency] private readonly PricingSystem _pricing = default!;
 
     private ISawmill _sawmill = default!;
 
@@ -16,14 +17,11 @@ public sealed partial class PirateSystem : EntitySystem
         _sawmill = _logManager.GetSawmill("Pirates");
     }
 
-    private void MarkPirateEquipment(EntityUid grid)
+    private void GetInitialShipValue(EntityUid grid)
     {
-        var xform = Transform(grid);
-        var enumerator = xform.ChildEnumerator;
-        var pirateEquipment = new PirateEquipmentComponent();
-        while (enumerator.MoveNext(out var child))
+        var val = _pricing.AppraiseGrid(grid, ent =>
         {
-            EntityManager.AddComponent(child, pirateEquipment, true);
-        }
+            return !HasComp<PirateEquipmentComponent>(ent);
+        });
     }
 }
