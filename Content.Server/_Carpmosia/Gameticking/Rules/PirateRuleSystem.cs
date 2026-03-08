@@ -1,5 +1,5 @@
 using Content.Server.Cargo.Systems;
-using Content.Server.Pirates.Components;
+using Content.Server.GameTicking.Rules.Components;
 
 namespace Content.Server.Pirates;
 
