@@ -148,7 +148,12 @@ public sealed partial class ToolRefinablSystem : EntitySystem
             // TODO: Use RandomPredicted https://github.com/space-wizards/RobustToolbox/pull/5849
             var rndSeed = SharedRandomExtensions.HashCodeCombine((int)_gameTiming.CurTick.Value, args.User.Id, uid.Id);
             var rng = new System.Random(rndSeed);
-            SpawnRefinement(component.RefineResult, uid, rng);
+            // Carpmosia-start - cutting inside a container fix
+            if (_container.TryGetContainingContainer(uid, out var container))
+                _container.Remove((uid, null, null), container);
+
+            SpawnRefinement(component.RefineResult, uid, rng, container);
+            // Carpmosia-end - cutting inside a container fix
         }
 
         if (component.Sound != null)
@@ -158,7 +163,7 @@ public sealed partial class ToolRefinablSystem : EntitySystem
         _destructible.DestroyEntity(uid);
     }
 
-    private void SpawnRefinement(List<EntitySpawnEntry> spawnList, EntityUid source, System.Random rng)
+    private void SpawnRefinement(List<EntitySpawnEntry> spawnList, EntityUid source, System.Random rng, BaseContainer? container) // Carpmosia-edit - cutting inside a container fix
     {
         var spawns = EntitySpawnCollection.GetSpawns(spawnList, rng);
         var spawned = new List<EntityUid>(spawns.Count);
@@ -167,7 +172,7 @@ public sealed partial class ToolRefinablSystem : EntitySystem
             var refineResultUid = PredictedSpawnNextToOrDrop(protoId, source);
             spawned.Add(refineResultUid);
 
-            if (!_container.IsEntityOrParentInContainer(refineResultUid))
+            if (container == null || !_container.Insert(refineResultUid, container)) // Carpmosia-edit - cutting inside a container fix
             {
                 var randVect = rng.NextPolarVector2(2.0f, 2.5f);
                 _physics.SetLinearVelocity(refineResultUid, randVect);
